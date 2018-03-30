@@ -6,7 +6,7 @@ const bot = new discord.Client();
 
 // Event Handler...
 
-bot.on('ready', () => {require('./events/readyEvent.js')(bot)})
+bot.on('ready', () => require('./events/readyEvent.js')(bot))
 bot.on('message', message => require('./events/messageEvent.js')(bot, message))
 bot.on("error", err => console.error(err))
 bot.on('guildMemberAdd', member => require('./events/guildMemberAdd.js')(bot, member))

@@ -12,4 +12,7 @@ bot.on("error", err => console.error(err))
 bot.on('guildMemberAdd', member => require('./events/guildMemberAdd.js')(bot, member))
 bot.on('guildMemberRemove', member => require('./events/guildMemberRemove.js')(bot, member))
 
+
+bot.login(process.env.token)
+
 // Bot Made by FHGDev#6545 for the purposes of 'Fortnite Squad' Discord Server.
